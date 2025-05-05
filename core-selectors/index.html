@@ -39,6 +39,56 @@
 
 
     </style> -->
+    <!--
+    <style>
+        /*example of pseudo-element and the content attribute*/
+        .landing::before {
+            content: "";
+            background: #000000;
+            display: block;
+            height: 100px;
+        }
+    </style>
+    -->
+
+    <!-- <style>
+        .float-container {
+            border: 2px solid grey;
+            padding: 10px;
+        }
+
+        .float-box {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            margin-right: 10px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+
+        }
+    </style> -->
+
+    <!--same thing as just above using Flexbox-->
+
+    <style>
+        .flex-container {
+            display: flex;
+            border: 2px solid green;
+            padding: 10px;
+        }
+
+        .flex-box {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
     <!--Starting of Core Selectors-->
@@ -54,11 +104,42 @@
     </p> -->
 
     <!--clear-->
-    <div style="float:left; width: 100px; height: 100px; background: red;"></div>
+    <!-- <div style="float:left; width: 100px; height: 100px; background: red;"></div>
     <p style="clear: left;">This comes below the float.</p>
 
     <div style="float:right; width: 100px; height: 100px; background: blue;"></div>
-    <div style="clear: right; vertical-align: center;">This moves below the blue box</div>
+    <div style="clear: right; vertical-align: center;">This moves below the blue box</div> -->
+
+    <!--position - with the value of static (default), relative, absolute, fixed and sticky, we can set the position and behavior for an element-->
+    <!--overflow - with the value of  visible, hidden, scroll and auto, we can choose the behavior for an element in which the text is overflowing!-->
+
+    <!--pseudo-elements
+        syntax:
+            selector::pseudo-element { styles }
+                most common:
+                    1. before
+                    2. after
+                    (are inline)
+    -->
+    <!--example-->
+    <!-- <p class="landing">
+        I'm just a paragraph!
+    </p> -->
+    
+    <!--.clearfix (a CSS utility class)-->
+    <!-- <div class="float-container clearfix">
+        <div class="float-box">Box1</div>
+        <div class="float-box">Box2</div>
+        </div>
+    </div> -->
+
+    <!--same thing as above but using flexbox-->
+    <div class="flex-container">
+        <div class="flex-box">Box1</div>
+        <div class="flex-box">Box2</div>
+        </div>
+    </div>
+
 
 </body>
 </html>
